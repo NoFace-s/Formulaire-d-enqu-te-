@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI' Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #cbaadf, #764ba2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow-y: auto;
+}
+
+form {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8rem;
+    color: #fff;
+    border-radius: 8px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.question {
+    margin-bottom: 22px;
+}
+
+select {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 250px;
+    border-radius: 5px;
+    border: 2px solid #000000;
+}
+
+select,
+input[type="text"],
+.textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    ;
+}
+
+.textarea {
+    display: none;
+}
+
+select:focus,
+input[type="text"]:focus,
+.textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 6px rgba(102, 126, 234, 0.5);
+    outline: none;
+}
+
+
+/*bouton autre de la question 7 */
+
+.buttonAutre {
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    width: 20%;
+    font-size: 12px;
+    font-weight: bold;
+    transition: transform 0.2s ease, 0.3s ease;
+}
+
+.button {
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    transition: transform 0.2s ease, 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+#zoneAutre {
+    display: none;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 93%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+
+/*Annimation d"apparition */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.popup {
+    width: 300px;
+    background: linear-gradient(140deg, #fcfcff, #8950ca, #fff);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: visible;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50;
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    z-index: auto;
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500px;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px;
+    background: linear-gradient(150deg, #1be608, #f1f3f1, #1be608);
+    color: #140808;
+    outline: none;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: #140808;
+}

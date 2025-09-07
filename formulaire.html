@@ -1,0 +1,168 @@
+<!doctype HTML>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+    <title> formulaire d'enquete </title>
+</head>
+
+<body>
+
+    <h1> FORMULAIRE D'ENQUETE </h1>
+
+    <form>
+        <!--Question 1-->
+        <div class="question">
+            <label>1- Utulisez-vous actuellement une applications de gps ?</label><br>
+            <select id="reponse" name="reponse" onchange="afficherZoneTexte()">
+                    <option value="">...sélectionnez une reponse...</option>
+                    <option> Oui </option>
+                    <option> Non </option>
+            </select>
+            <!--condition a mettre ici-->
+            <textarea class="textarea" id="explicationNon" placeholder="expliquez pourquoi vous utulisez pas de gps"></textarea>
+        </div>
+
+        <!--Question 2-->
+        <div class="question">
+            <label>2- Quels sont les fonctionnalités que vous appréciez le plus dans votre application de GPS actuelle ?</label><br>
+            <textarea>veuillez les ennumeré </textarea>
+        </div>
+
+        <!--Question 3-->
+        <div class="question">
+            <label>3- Seriez-vous intéressé par une application de gps qui permet aux conducteurs d'échanger sur un forum et de notifier les embouteillages et autres incidents sur le chemin ?</label><br>
+            <select>
+                    <option value="">...sélectionnez une reponse...</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                </select>
+        </div>
+
+        <!--Question 4-->
+        <div class="question">
+            <label>4- Pensez-vous que cette application pourrait vous aider à améliorer votre expérience de conduite ?</label><br>
+            <select>
+                    <option value="">...sélectionnez une reponse...</option>
+                    <option>Oui</option>
+                    <option>Non</option>
+                </select>
+        </div>
+
+        <!--Question 5-->
+        <div class="question">
+            <label>5- Pensez-vous que la possibilité de discuter avec d'autres conducteurs sur le forum pourrait etre utile pour vous ?</label><br>
+            <select id="reponse1" name="reponse1" onchange="afficherZoneTexte1()">
+            <option value="">...sélectionnez une reponse...</option>
+            <option>Oui</option>
+            <option>Non</option>
+            </select>
+            <!--condition a mettre ici-->
+            <textarea class="textarea" id="explicationNon1" placeholder="expliquez pourquoi vous utulisez pas de gps"></textarea>
+        </div>
+
+        <!--Question 6-->
+        <div class="question">
+            <label>6- Seriez-vous intéressé par la possibilité de recevoir des notifications en temps réel sur les incidents sur votre chemin ?</label><br>
+            <select>
+                <option value="">...sélectionnez une reponse...</option>
+                <option>Oui</option>
+                <option>Non</option>
+            </select>
+        </div>
+
+        <!--Question 7-->
+        <div class="question">
+            <label>7- Quel types d'informations aimeriez-vous voir partagés sur le forum ?</label><br>
+            <!--jouts de js pour fourni des cse de reponse a chaque reponse et un bouton autres
+            avec condition pour entrer une autre sugestion-->
+            <select id="select1" onchange="updateOptions()">
+                <option value="">...sélectionnez une reponse...</option>
+                <option value="">None</option>
+                <option value="Embouteillages">Embouteillages</option>
+                <option value="Travaux routiers">Travaux routiers</option>
+                <option value="Accidents">Accidents</option>
+            </select><br>
+
+            <select id="select2" onchange="updateOptions()">
+                <option value="">...sélectionnez une reponse...</option>
+                <option value="">None</option>
+                <option value="Embouteillages">Embouteillages</option>
+                <option value="Travaux routiers">Travaux routiers</option>
+                <option value="Accidents">Accidents</option>
+            </select><br>
+
+            <select id="select3" onchange="updateOptions()">
+                <option value="">...sélectionnez une reponse...</option>
+                <option value="">None</option>
+                <option value="Embouteillages">Embouteillages</option>
+                <option value="Travaux routiers">Travaux routiers</option>
+                <option value="Accidents">Accidents</option>
+            </select>
+
+            <div>
+                <button class="buttonAutre" id="autre" type="button"> Autre </button>
+            </div>
+            <div id="zoneAutre">
+                <textarea id="zone" rows="3" cols="40" placeholder="écrivez votre reponse ici..."></textarea>
+            </div>
+        </div>
+
+        <!--Question 8-->
+        <div class="question">
+            <label>8- Quels sont vos préoccupations en matière de sécurité et de confidentialité pour une application de ce type ?</label><br>
+            <textarea>veuillez entrer vos preoccupations</textarea>
+        </div>
+
+        <!--Question 9-->
+        <div class="question">
+            <label>9- Seriez-vous pret à partager vos informations de localisation avec l'application ?</label><br>
+            <select id="reponse2" name="reponse2" onchange="afficherZoneTexte2()">
+                <option value="">...sélectionnez une reponse...</option>
+                <option>Oui</option>
+                <option>Non</option>
+            </select>
+            <!-- si non alors textarea pour expliquer pourquoi il veut pas-->
+            <textarea class="textarea" id="explicationNon2" placeholder="pourquoi ?"></textarea>
+        </div>
+
+        <!--Question 10-->
+        <div class="question">
+            <label>10- Pensez-vous que l'application devrait avoir des fonctionnalités de modération pour garantir la qualité des discussions sur le forum ?</label><br>
+            <select>
+                <option value="">...sélectionnez une reponse...</option>
+                <option>Oui</option>
+                <option>Non</option>
+            </select>
+        </div>
+
+        <!--Question 11-->
+        <div class="question">
+            <label>11- Avez-vous des commentaires ou des suggestions pour ameliorer l'application proposée ?</label><br>
+            <select id="reponse3" name="reponse3" onchange="afficherZoneTexte3()">
+                <option value="">...sélectionnez une reponse...</option>
+                <option>Oui</option>
+                <option>Non</option>
+            </select>
+            <!--si oui zone de texte pourqu'il puisse entrer ces preocupatiions-->
+            <textarea class="textarea" id="explicationOui" placeholder="Entrer votre commentaire ou votre suggestion"></textarea>
+        </div>
+
+        <!--Question 12-->
+        <div class="question">
+            <label>12- Pensez-vous que vous seriez pret à utuliser cette application si elle était disponible ?</label><br>
+            <select>
+                <option value="">...sélectionnez une reponse...</option>
+                <option>Oui</option>
+                <option>Non</option>
+            </select>
+        </div><br>
+
+        <!--bouton envoyer-->
+        <button id="bouton" class="button" type="button">envoyer</button>
+    </form>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

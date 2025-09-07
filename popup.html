@@ -1,0 +1,30 @@
+<!doctype html >
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+< <body>
+    <div class="popup" id="popup">
+        <img src="404-tick.png">
+        <h2>Thanks You</h2>
+        <p>Your details have been succesfully submitted. Thaks!</p>
+        <button id="clunch" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        const popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+        document.getElementById("clunch").addEventListener("click", function() {
+            window.location.href = "formulaire.html";
+        })
+    </script>
+    </body>
